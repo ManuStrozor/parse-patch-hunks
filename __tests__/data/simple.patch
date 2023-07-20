@@ -1,0 +1,9 @@
+@@ -4303,7 +4303,7 @@ const getCurrencyFormattingOptions = (currencyIsoCode) => {
+ return {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+-   style: "currency",
++   style: "currency", // add comment
+    currencyDisplay: "code",
+    currency: currencyIsoCode
+ }

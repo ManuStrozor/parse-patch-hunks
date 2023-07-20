@@ -1,0 +1,340 @@
+[
+    {
+        "header": {
+            "oldStart": 16,
+            "oldLines": 10,
+            "newStart": 16,
+            "newLines": 12
+        },
+        "context": "const { parse } = JSON",
+        "lines": [
+            {
+                "type": "unchanged",
+                "oldIndex": 16,
+                "newIndex": 16,
+                "oldValue": "// https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-lambda-proxy-integrations.html",
+                "newValue": "// https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-lambda-proxy-integrations.html"
+            },
+            {
+                "type": "unchanged",
+                "oldIndex": 17,
+                "newIndex": 17,
+                "oldValue": "// http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-create-api-as-simple-proxy-for-lambda.html",
+                "newValue": "// http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-create-api-as-simple-proxy-for-lambda.html"
+            },
+            {
+                "type": "unchanged",
+                "oldIndex": 18,
+                "newIndex": 18,
+                "oldValue": "export default class LambdaProxyIntegrationEvent {",
+                "newValue": "export default class LambdaProxyIntegrationEvent {"
+            },
+            {
+                "type": "added",
+                "oldIndex": null,
+                "newIndex": 19,
+                "oldValue": null,
+                "newValue": "  #path = null"
+            },
+            {
+                "type": "unchanged",
+                "oldIndex": 19,
+                "newIndex": 20,
+                "oldValue": "  #request = null",
+                "newValue": "  #request = null"
+            },
+            {
+                "type": "unchanged",
+                "oldIndex": 20,
+                "newIndex": 21,
+                "oldValue": "  #stage = null",
+                "newValue": "  #stage = null"
+            },
+            {
+                "type": "unchanged",
+                "oldIndex": 21,
+                "newIndex": 22,
+                "oldValue": "",
+                "newValue": ""
+            },
+            {
+                "type": "changed",
+                "oldIndex": 22,
+                "newIndex": 23,
+                "oldValue": "  constructor(request, stage) {",
+                "newValue": "  constructor(request, stage, path) {"
+            },
+            {
+                "type": "added",
+                "oldIndex": null,
+                "newIndex": 24,
+                "oldValue": null,
+                "newValue": "    this.#path = path"
+            },
+            {
+                "type": "unchanged",
+                "oldIndex": 23,
+                "newIndex": 25,
+                "oldValue": "    this.#request = request",
+                "newValue": "    this.#request = request"
+            },
+            {
+                "type": "unchanged",
+                "oldIndex": 24,
+                "newIndex": 26,
+                "oldValue": "    this.#stage = stage",
+                "newValue": "    this.#stage = stage"
+            },
+            {
+                "type": "unchanged",
+                "oldIndex": 25,
+                "newIndex": 27,
+                "oldValue": "  }",
+                "newValue": "  }"
+            }
+        ]
+    },
+    {
+        "header": {
+            "oldStart": 106,
+            "oldLines": 7,
+            "newStart": 108,
+            "newLines": 6
+        },
+        "context": "export default class LambdaProxyIntegrationEvent {",
+        "lines": [
+            {
+                "type": "unchanged",
+                "oldIndex": 106,
+                "newIndex": 108,
+                "oldValue": "    const {",
+                "newValue": "    const {"
+            },
+            {
+                "type": "unchanged",
+                "oldIndex": 107,
+                "newIndex": 109,
+                "oldValue": "      info: { received, remoteAddress },",
+                "newValue": "      info: { received, remoteAddress },"
+            },
+            {
+                "type": "unchanged",
+                "oldIndex": 108,
+                "newIndex": 110,
+                "oldValue": "      method,",
+                "newValue": "      method,"
+            },
+            {
+                "type": "removed",
+                "oldIndex": 109,
+                "newIndex": null,
+                "oldValue": "      path,",
+                "newValue": null
+            },
+            {
+                "type": "unchanged",
+                "oldIndex": 110,
+                "newIndex": 111,
+                "oldValue": "    } = this.#request",
+                "newValue": "    } = this.#request"
+            },
+            {
+                "type": "unchanged",
+                "oldIndex": 111,
+                "newIndex": 112,
+                "oldValue": "",
+                "newValue": ""
+            },
+            {
+                "type": "unchanged",
+                "oldIndex": 112,
+                "newIndex": 113,
+                "oldValue": "    const httpMethod = method.toUpperCase()",
+                "newValue": "    const httpMethod = method.toUpperCase()"
+            }
+        ]
+    },
+    {
+        "header": {
+            "oldStart": 125,
+            "oldLines": 7,
+            "newStart": 126,
+            "newLines": 7
+        },
+        "context": "export default class LambdaProxyIntegrationEvent {",
+        "lines": [
+            {
+                "type": "unchanged",
+                "oldIndex": 125,
+                "newIndex": 126,
+                "oldValue": "      multiValueQueryStringParameters: parseMultiValueQueryStringParameters(",
+                "newValue": "      multiValueQueryStringParameters: parseMultiValueQueryStringParameters("
+            },
+            {
+                "type": "unchanged",
+                "oldIndex": 126,
+                "newIndex": 127,
+                "oldValue": "        url,",
+                "newValue": "        url,"
+            },
+            {
+                "type": "unchanged",
+                "oldIndex": 127,
+                "newIndex": 128,
+                "oldValue": "      ),",
+                "newValue": "      ),"
+            },
+            {
+                "type": "changed",
+                "oldIndex": 128,
+                "newIndex": 129,
+                "oldValue": "      path,",
+                "newValue": "      path: this.#path,"
+            },
+            {
+                "type": "unchanged",
+                "oldIndex": 129,
+                "newIndex": 130,
+                "oldValue": "      pathParameters: nullIfEmpty(pathParams),",
+                "newValue": "      pathParameters: nullIfEmpty(pathParams),"
+            },
+            {
+                "type": "unchanged",
+                "oldIndex": 130,
+                "newIndex": 131,
+                "oldValue": "      queryStringParameters: parseQueryStringParameters(url),",
+                "newValue": "      queryStringParameters: parseQueryStringParameters(url),"
+            },
+            {
+                "type": "unchanged",
+                "oldIndex": 131,
+                "newIndex": 132,
+                "oldValue": "      requestContext: {",
+                "newValue": "      requestContext: {"
+            }
+        ]
+    },
+    {
+        "header": {
+            "oldStart": 170,
+            "oldLines": 16,
+            "newStart": 171,
+            "newLines": 16
+        },
+        "context": "export default class LambdaProxyIntegrationEvent {",
+        "lines": [
+            {
+                "type": "unchanged",
+                "oldIndex": 170,
+                "newIndex": 171,
+                "oldValue": "          userAgent: this.#request.headers['user-agent'] || '',",
+                "newValue": "          userAgent: this.#request.headers['user-agent'] || '',"
+            },
+            {
+                "type": "unchanged",
+                "oldIndex": 171,
+                "newIndex": 172,
+                "oldValue": "          userArn: 'offlineContext_userArn',",
+                "newValue": "          userArn: 'offlineContext_userArn',"
+            },
+            {
+                "type": "unchanged",
+                "oldIndex": 172,
+                "newIndex": 173,
+                "oldValue": "        },",
+                "newValue": "        },"
+            },
+            {
+                "type": "changed",
+                "oldIndex": 173,
+                "newIndex": 174,
+                "oldValue": "        path: `/${this.#stage}${this.#request.route.path}`,",
+                "newValue": "        path: this.#request.route.path,"
+            },
+            {
+                "type": "unchanged",
+                "oldIndex": 174,
+                "newIndex": 175,
+                "oldValue": "        protocol: 'HTTP/1.1',",
+                "newValue": "        protocol: 'HTTP/1.1',"
+            },
+            {
+                "type": "unchanged",
+                "oldIndex": 175,
+                "newIndex": 176,
+                "oldValue": "        requestId: createUniqueId(),",
+                "newValue": "        requestId: createUniqueId(),"
+            },
+            {
+                "type": "unchanged",
+                "oldIndex": 176,
+                "newIndex": 177,
+                "oldValue": "        requestTime,",
+                "newValue": "        requestTime,"
+            },
+            {
+                "type": "unchanged",
+                "oldIndex": 177,
+                "newIndex": 178,
+                "oldValue": "        requestTimeEpoch,",
+                "newValue": "        requestTimeEpoch,"
+            },
+            {
+                "type": "unchanged",
+                "oldIndex": 178,
+                "newIndex": 179,
+                "oldValue": "        resourceId: 'offlineContext_resourceId',",
+                "newValue": "        resourceId: 'offlineContext_resourceId',"
+            },
+            {
+                "type": "changed",
+                "oldIndex": 179,
+                "newIndex": 180,
+                "oldValue": "        resourcePath: this.#request.route.path,",
+                "newValue": "        resourcePath: this.#path,"
+            },
+            {
+                "type": "unchanged",
+                "oldIndex": 180,
+                "newIndex": 181,
+                "oldValue": "        stage: this.#stage,",
+                "newValue": "        stage: this.#stage,"
+            },
+            {
+                "type": "unchanged",
+                "oldIndex": 181,
+                "newIndex": 182,
+                "oldValue": "      },",
+                "newValue": "      },"
+            },
+            {
+                "type": "changed",
+                "oldIndex": 182,
+                "newIndex": 183,
+                "oldValue": "      resource: this.#request.route.path,",
+                "newValue": "      resource: this.#path,"
+            },
+            {
+                "type": "unchanged",
+                "oldIndex": 183,
+                "newIndex": 184,
+                "oldValue": "      stageVariables: null,",
+                "newValue": "      stageVariables: null,"
+            },
+            {
+                "type": "unchanged",
+                "oldIndex": 184,
+                "newIndex": 185,
+                "oldValue": "    }",
+                "newValue": "    }"
+            },
+            {
+                "type": "unchanged",
+                "oldIndex": 185,
+                "newIndex": 186,
+                "oldValue": "  }",
+                "newValue": "  }"
+            }
+        ]
+    }
+]

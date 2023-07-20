@@ -1,0 +1,33 @@
+{
+  "name": "parse-patch-hunks",
+  "version": "1.0.0",
+  "description": "Patch hunks analysis made simple",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ManuStrozor/parse-patch-hunks.git"
+  },
+  "keywords": [
+    "parse",
+    "parser",
+    "patch",
+    "patches",
+    "hunks",
+    "chunks",
+    "git",
+    "diff",
+    "octokit"
+  ],
+  "author": "Emmanuel Turbet-Delof <m.emmanuel.td@gmail.com> (https://github.com/ManuStrozor)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ManuStrozor/parse-patch-hunks/issues"
+  },
+  "homepage": "https://github.com/ManuStrozor/parse-patch-hunks#readme",
+  "devDependencies": {
+    "jest": "^29.6.1"
+  }
+}
