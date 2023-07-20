@@ -1,3 +1,4 @@
+[![npm version](https://badge.fury.io/js/parse-patch-hunks.svg)](https://badge.fury.io/js/parse-patch-hunks)
 # parse-patch-hunks
 Patch hunks analysis made easy and simple
 
