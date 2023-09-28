@@ -1,0 +1,14 @@
+name: Test
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest # Use bash shell with 256color support
+    env:
+      TERM: xterm-256color
+    steps:
+      - name: Run command
+        run: echo $TERM
