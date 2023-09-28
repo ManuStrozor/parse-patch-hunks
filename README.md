@@ -1,10 +1,12 @@
-[![npm version](https://badge.fury.io/js/parse-patch-hunks.svg)](https://badge.fury.io/js/parse-patch-hunks)
 # parse-patch-hunks
+
+[![npm version](https://badge.fury.io/js/parse-patch-hunks.svg)](https://badge.fury.io/js/parse-patch-hunks)
+
 Patch hunks analysis made easy and simple
 
 ## Installation
 
-`npm install parse-patch-hunks`
+`npm i parse-patch-hunks`
 
 ## Usage
 
