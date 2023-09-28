@@ -4,7 +4,7 @@ Patch hunks analysis made easy and simple
 
 ## Installation
 
-`npm i parse-patch-hunks`
+`npm install parse-patch-hunks`
 
 ## Usage
 
