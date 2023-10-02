@@ -334,6 +334,13 @@
                 "newIndex": 186,
                 "oldValue": "  }",
                 "newValue": "  }"
+            },
+            {
+                "type": "removed",
+                "oldIndex": 186,
+                "newIndex": null,
+                "oldValue": "",
+                "newValue": null
             }
         ]
     }
