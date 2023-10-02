@@ -66,9 +66,10 @@ function parse(patchHunks) {
             const newLine = new Line(hunk.header.oldStart + hunk.lines.length - offset.add, hunk.header.newStart + hunk.lines.length - offset.del, line);
 
             if (line.startsWith("-")) {
-                if (lines[i+1].startsWith("+")) {
+                const nextLine = lines[i+1];
+                if (nextLine && nextLine.startsWith("+")) {
                     newLine.type = "changed";
-                    newLine.setNewValue(lines[i+1]);
+                    newLine.setNewValue(nextLine);
                     i++;
                 } else {
                     newLine.type = "removed";
